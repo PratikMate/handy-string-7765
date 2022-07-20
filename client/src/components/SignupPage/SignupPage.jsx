@@ -3,11 +3,16 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 // import { FaGoogle } from 'react-icons/fa';
 import playstore from '../../assets/img/Md_Arshad_Khan/playstore.png'
+import ClockifyLogo from '../../assets/svg/clockifyLogo.svg'
 
 const SignUpStyling = styled.div`
 text-align:center;
-margin-top:80px;
 background-color:#f2f6f8;
+.navbarForLoginAndSignup{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 30px;
+}
 .mainSignUpDiv{
   width:370px;
   margin:auto;
@@ -76,6 +81,10 @@ background-color:#f2f6f8;
 const SignupPage = () => {
   return (
     <SignUpStyling>
+      <div className='navbarForLoginAndSignup'>
+          <Link to='/'><img src={ClockifyLogo} style={{ height: '32px' }} alt='NavProjectLogo' /></Link>
+          <p style={{ fontSize: "14px", color: 'grey' }}>Already Have an account ? <Link to='/login' style={{ fontWeight: "600", color: "#1b74e4", cursor: "pointer", textDecoration: 'none' }}>Log in</Link></p>
+        </div>
       <p style={{ fontSize: '32px', fontWeight: '500', fontFamily: 'sans-serif',  margin:'10px' , height:'fit-content' }}>Get started with Clockify</p>
       <p style={{ fontSize: '16px', color: 'brown', margin:'0px' }}>Create a free account to start tracking time and supercharge your productivity. </p>
         <p style={{ fontSize: '12px', color: 'grey' }}>No credit card required · Unsubscribe at any time </p>
@@ -100,7 +109,7 @@ const SignupPage = () => {
           </div>
         </div>
         <div className='DontHaveAccountSignUp'>
-          <p style={{ fontSize: "14px" }}>Have an account ? <Link to='/login' style={{ fontWeight: "600", color: "#1b74e4", cursor: "pointer" }}>Log in</Link></p>
+          <p style={{ fontSize: "14px" }}>Already Have an account ? <Link to='/login' style={{ textDecoration: 'none',fontWeight: "600", color: "#1b74e4", cursor: "pointer" }}>Log in</Link></p>
         </div>
         <br />
         {/* <p style={{ fontSize: "14px", margin: '0px 0px 15px 0px' }}>Get the app</p> */}
