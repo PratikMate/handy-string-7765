@@ -141,11 +141,11 @@ const LoginPage = () => {
         </div>
       </div>
       <div className="loginSideImage" style={{ background: '#3f5abf' }}>
-        <button style={{ border: 'none', fontSize: '12px', padding: '3px 10px', height: 'fit-content', marginTop: '20px', cursor: 'pointer' }}><Link to='/' style={{ textDecoration: 'none' }}>NEW</Link></button>
+        <button style={{ border: 'none', fontSize: '12px', padding: '3px 10px', height: 'fit-content', marginTop: '20px', cursor: 'pointer' }}><Link to='/features' style={{ textDecoration: 'none' }}>NEW</Link></button>
         <p style={{ color: 'white', fontSize: '33px', margin: '10px 0px 0px 0px' }}>Scheduling</p>
         <p style={{ color: 'white', fontSize: '17px', width: '80%', margin: 'auto', marginTop: '20px', marginBottom: '20px' }}>Visualize projects on a timeline and plan team's capacity (see who's busy and who's available). </p>
-        <button style={{ background: 'black', padding: '5px 20px', marginBottom: '20px', cursor: 'pointer' }}><Link to='/' style={{ textDecoration: 'none', color: 'white' }}>SEE HOW IT WORKS</Link></button>
-        <Link to='/'><img src={login} width='100%' style={{ textAlign: 'right', padding: '10px 0px 0px 20px', bottom: '0px', cursor: 'pointer' }} alt='loginSideImage' /></Link>
+        <button style={{ background: 'black', padding: '5px 20px', marginBottom: '20px', cursor: 'pointer' }}><Link to='/features' style={{ textDecoration: 'none', color: 'white' }}>SEE HOW IT WORKS</Link></button>
+        <Link to='/features'><img src={login} width='100%' style={{ textAlign: 'right', padding: '10px 0px 0px 20px', bottom: '0px', cursor: 'pointer' }} alt='loginSideImage' /></Link>
       </div>
     </SignUpStyling>
   )
