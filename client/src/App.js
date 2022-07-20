@@ -4,7 +4,7 @@ import LoginPage from './components/LoginPage/LoginPage';
 import SignupPage from './components/SignupPage/SignupPage';
 function App() {
   return (
-    <div className="App" style={{marginTop:"70px", marginBottom:"70px"}}>
+    <div className="App">
       <Routes>
         <Route path='/signup' element={<SignupPage/>} />
         <Route path='/login' element={<LoginPage/>} />
