@@ -6,12 +6,13 @@ import SignupPage from './components/SignupPage/SignupPage';
 function App() {
   return (
     <div className="App">
+      
       <Routes>
         <Route path='/signup' element={<SignupPage/>} />
         <Route path='/login' element={<LoginPage/>} />
+        <Route path='/download' element={<DownloadPage />} />
         
       </Routes>
-      <DownloadPage />
     </div>
   );
 }
