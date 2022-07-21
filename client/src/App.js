@@ -1,17 +1,8 @@
-import {Routes, Route} from "react-router-dom"
-import './App.css';
-import DownloadPage from './components/DownloadPage/DownloadPage';
-import LoginPage from './components/LoginPage/LoginPage';
-import SignupPage from './components/SignupPage/SignupPage';
+import Dashboard from "./mainComponent/Dashboard/Dashboard"
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path='/signup' element={<SignupPage/>} />
-        <Route path='/login' element={<LoginPage/>} />
-        
-      </Routes>
-      <DownloadPage />
+      <Dashboard/>
     </div>
   );
 }
