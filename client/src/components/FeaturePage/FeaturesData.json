@@ -1,0 +1,422 @@
+[
+    {
+        "_id":1,
+        "title":"Time Tracker",
+        "subTitle": "Start and stop timer as you work, or enter hours manually.",
+        "img1":"https://clockify.me/assets/images/features/features-tracker-screenshot.svg",
+        "img2":"https://clockify.me/assets/images/features/features-tracker-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":"Timer",
+                "subHeading": "Track time using a stopwatch."
+            },
+            {
+                "id":2,
+                "heading":"Add time",
+                "subHeading": "Enter and edit hours manually."
+            },
+            {
+                "id":3,
+                "heading":"Continue",
+                "subHeading": "Continue tracking with one click."
+            },
+            {
+                "id":4,
+                "heading":"Billable",
+                "subHeading": "Mark hours as billable."
+            }
+        ]
+    
+    },
+    {
+        "_id":2,
+        "title":"Timesheet",
+        "subTitle": "Log your weekly activities in less than a minute.",
+        "img1":"https://clockify.me/assets/images/features/features-timesheet-screenshot.svg",
+        "img2":"https://clockify.me/assets/images/features/features-timesheet-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":"Activities",
+                "subHeading": "Select activity and enter time."
+            },
+            {
+                "id":2,
+                "heading":"Templates",
+                "subHeading": "Quickly load activities each week."
+            },
+            {
+                "id":3,
+                "heading":"Approval",
+                "subHeading": "Submit and approve timesheets."
+            },
+            {
+                "id":4,
+                "heading":"Reminders",
+                "subHeading": "Reminder for due timesheets."
+            }
+        ]
+    
+    },
+    {
+        "_id":3,
+        "title":"Kiosk",
+        "subTitle": "Clock in with your PIN code from a shared device.",
+        "img1":"https://clockify.me/assets/images/features/features-kiosk-screenshot.png",
+        "img2":"https://clockify.me/assets/images/features/features-kiosk-explainer.png",
+        "table": [
+            {
+                "id":1,
+                "heading":"Clock-in",
+                "subHeading": "Punch in from a shared device."
+            },
+            {
+                "id":2,
+                "heading":"Breaks",
+                "subHeading": "Track employee breaks."
+            },
+            {
+                "id":3,
+                "heading":"PIN",
+                "subHeading": "Sign in with personal code."
+            },
+            {
+                "id":4,
+                "heading":"Activity",
+                "subHeading": "See how much you've worked."
+            }
+        ]
+    
+    },
+    {
+        "_id":4,
+        "title":"Calendar",
+        "subTitle": "Visualize your time and block out activities.",
+        "img1":"https://clockify.me/assets/images/features/features-calendar-screenshot.svg",
+        "img2":"https://clockify.me/assets/images/features/features-calendar-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":"Visualize",
+                "subHeading": "See how your day looks like."
+            },
+            {
+                "id":2,
+                "heading":"Add",
+                "subHeading": "Block hours with a click."
+            },
+            {
+                "id":3,
+                "heading":"Edit",
+                "subHeading": "Edit blocks by resizing"
+            },
+            {
+                "id":4,
+                "heading":"Connect",
+                "subHeading": "Add events from Outlook/Google."
+            }
+        ]
+    
+    },
+    {
+        "_id":5,
+        "title":"Dashboard",
+        "subTitle": "See where you spend time and what your team is working on.",
+        "img1":"https://clockify.me/assets/images/features/features-dashboard-screenshot.svg",
+        "img2":"https://clockify.me/assets/images/features/features-dashboard-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":"Activities",
+                "subHeading": "See where you spend most time."
+            },
+            {
+                "id":2,
+                "heading":"Charts",
+                "subHeading": "All time and money at a glance."
+            },
+            {
+                "id":3,
+                "heading":"Breakdowns",
+                "subHeading": "See what your team worked on."
+            },
+            {
+                "id":4,
+                "heading":"Status",
+                "subHeading": "See who currently works on what."
+            }
+        ]
+    
+    },
+    {
+        "_id":6,
+        "title":"Reports",
+        "subTitle": "See who worked on what, how much money you earn, review your team's time, and export the data.",
+        "img1":"https://clockify.me/assets/images/features/features-reports-screenshot.svg",
+        "img2":"https://clockify.me/assets/images/features/features-reports-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":"Breakdowns",
+                "subHeading": "Overview by: day, activity, user..."
+            },
+            {
+                "id":2,
+                "heading":"Filters",
+                "subHeading": "Drill down into your data."
+            },
+            {
+                "id":3,
+                "heading":"Share",
+                "subHeading": "Share reports with clients via link."
+            },
+            {
+                "id":4,
+                "heading":"Export",
+                "subHeading": "Download PDF, CSV, or Excel."
+            }
+        ]
+    
+    },
+    {
+        "_id":7,
+        "title":"Activity",
+        "subTitle": "See visited sites and what you've worked on.",
+        "img1":"https://clockify.me/assets/images/features/features-locations-screenshot.png",
+        "img2":"https://clockify.me/assets/images/features/features-locations-explainer.png",
+        "table": [
+            {
+                "id":1,
+                "heading":"Locations",
+                "subHeading": "Track GPS location."
+            },
+            {
+                "id":2,
+                "heading":"Routes",
+                "subHeading": "See all visited locations."
+            },
+            {
+                "id":3,
+                "heading":"Screenshots",
+                "subHeading": "Record what you've worked on."
+            },
+            {
+                "id":4,
+                "heading":"Privacy",
+                "subHeading": "Control what data is gathered."
+            }
+        ]
+    
+    },
+    {
+        "_id":8,
+        "title":"Projects",
+        "subTitle": "Track time on projects, and keep an eye on progress and budget.",
+        "img1":"https://clockify.me/assets/images/features/features-projects-screenshot.svg",
+        "img2":"https://clockify.me/assets/images/features/features-projects-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":"Tasks",
+                "subHeading": "Categorize by job type."
+            },
+            {
+                "id":2,
+                "heading":"Rates",
+                "subHeading": "Multiple levels of hourly rates."
+            },
+            {
+                "id":3,
+                "heading":"Budget",
+                "subHeading": "Set budget or time estimate."
+            },
+            {
+                "id":4,
+                "heading":"Alerts",
+                "subHeading": "Get notified when close to budget."
+            }
+        ]
+    
+    },
+    {
+        "_id":9,
+        "title":" Team",
+        "subTitle": "Invite your team to track time in your account. ",
+        "img1":" https://clockify.me/assets/images/features/features-team-screenshot.svg",
+        "img2":" https://clockify.me/assets/images/features/features-team-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":" Invite team",
+                "subHeading": "Unlimited number of users, free. "
+            },
+            {
+                "id":2,
+                "heading":"Rates ",
+                "subHeading": "Set per user hourly rates. "
+            },
+            {
+                "id":3,
+                "heading":"Manager ",
+                "subHeading": " Give additional permissions."
+            },
+            {
+                "id":4,
+                "heading":" Groups",
+                "subHeading": " Manage access using groups."
+            }
+        ]
+    
+    },
+    {
+        "_id":10,
+        "title":"Scheduling ",
+        "subTitle": " Plan projects and visualize team's capacity.",
+        "img1":"https://clockify.me/assets/images/features/features-scheduling-projects-screenshot.svg ",
+        "img2":"https://clockify.me/assets/images/features/features-scheduling-projects-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":" Milestones",
+                "subHeading": "Visualize projects on timeline. "
+            },
+            {
+                "id":2,
+                "heading":"Assignments ",
+                "subHeading": "Decide who works on what. "
+            },
+            {
+                "id":3,
+                "heading":" Capacity",
+                "subHeading": " See who can take on more work."
+            },
+            {
+                "id":4,
+                "heading":" Publish",
+                "subHeading": " Let others see their assignments."
+            }
+        ]
+    
+    },
+    {
+        "_id":11,
+        "title":"Time off ",
+        "subTitle": " Track your team's holidays and time off requests.",
+        "img1":" https://clockify.me/assets/images/features/features-timeoff-screenshot.svg",
+        "img2":" https://clockify.me/assets/images/features/features-timeoff-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":"Policies ",
+                "subHeading": " Create time off policies."
+            },
+            {
+                "id":2,
+                "heading":" Holidays",
+                "subHeading": "Define holidays for paid leaves. "
+            },
+            {
+                "id":3,
+                "heading":" Requests",
+                "subHeading": "Request and approve leaves. "
+            },
+            {
+                "id":4,
+                "heading":"Balance ",
+                "subHeading": " Track available days/hours."
+            }
+        ]
+    
+    },
+    {
+        "_id":12,
+        "title":" Approval",
+        "subTitle": "Officially approve your team's timesheets and expenses. ",
+        "img1":"https://clockify.me/assets/images/features/features-approval-screenshot.svg ",
+        "img2":"https://clockify.me/assets/images/features/features-approval-explainer.svg ",
+        "table": [
+            {
+                "id":1,
+                "heading":"Submit ",
+                "subHeading": "Submit timesheets with one click. "
+            },
+            {
+                "id":2,
+                "heading":" Reminders",
+                "subHeading": "Send late timesheet reminders. "
+            },
+            {
+                "id":3,
+                "heading":"Immutable ",
+                "subHeading": " Prevent further changes."
+            },
+            {
+                "id":4,
+                "heading":"History ",
+                "subHeading": " See all requests in one place."
+            }
+        ]
+    
+    },
+    {
+        "_id":13,
+        "title":" Expenses ",
+        "subTitle": " Record fixed-fees and other project expenses.",
+        "img1":"https://clockify.me/assets/images/features/features-expenses-screenshot.svg ",
+        "img2":"https://clockify.me/assets/images/features/features-expenses-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":" Track",
+                "subHeading": "Record by sum or unit. "
+            },
+            {
+                "id":2,
+                "heading":" Types ",
+                "subHeading": "Define expense types. "
+            },
+            {
+                "id":3,
+                "heading":"Receipts ",
+                "subHeading": "Attach expense receipts. "
+            },
+            {
+                "id":4,
+                "heading":" Report",
+                "subHeading": "Analyze and export expenses. "
+            }
+        ]
+    
+    },
+    {
+        "_id":14,
+        "title":"Invoicing ",
+        "subTitle": "Issue invoices based on tracked time, expenses, and hourly rates. ",
+        "img1":" https://clockify.me/assets/images/features/features-invoicing-screenshot.svg",
+        "img2":" https://clockify.me/assets/images/features/features-invoicing-explainer.svg",
+        "table": [
+            {
+                "id":1,
+                "heading":"Create ",
+                "subHeading": "Import time and edit invoices. "
+            },
+            {
+                "id":2,
+                "heading":"PDF ",
+                "subHeading": "Download and send to client. "
+            },
+            {
+                "id":3,
+                "heading":" Customize",
+                "subHeading": "Add company logo and notes. "
+            },
+            {
+                "id":4,
+                "heading":" Expenses",
+                "subHeading": "Record and invoice fixed fees. "
+            }
+        ]
+    
+    }
+]
