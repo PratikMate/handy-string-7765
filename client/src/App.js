@@ -4,10 +4,12 @@ import DownloadPage from './components/DownloadPage/DownloadPage';
 import FeaturePage from "./components/FeaturePage/FeaturePage";
 import LoginPage from './components/LoginPage/LoginPage';
 import SignupPage from './components/SignupPage/SignupPage';
+import Navbar from "./mainComponent/Navbar";
 
 function App() {
   return (
-    <div className="App">      
+    <div className="App">
+      <Navbar />
       <Routes>
         <Route path='/signup' element={<SignupPage/>} />
         <Route path='/login' element={<LoginPage/>} />
