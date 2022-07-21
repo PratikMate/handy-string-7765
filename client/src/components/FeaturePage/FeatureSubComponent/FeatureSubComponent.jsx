@@ -4,6 +4,7 @@ import styled from 'styled-components'
 // import abc from '../../../assets/img/abc.svg'
 
 const FeatureSubComponentStyling = styled.div`
+${'' /* border:10px solid red; */}
 .IndividualFeatures{
     width:fit-content;
     margin:auto;
@@ -32,12 +33,20 @@ const FeatureSubComponentStyling = styled.div`
 `
 
 const FeatureSubComponent = (props) => {
+    var style1
     var [isHiddden, setHidden] = useState(true)
+    if (props._id % 2 !== 0) {
+        style1={ background: '#f7fcff' };
+    }
+    else{
+        style1 = {}
+    }
+    // console.log(props._id)
     return (
-        <FeatureSubComponentStyling>
+        <FeatureSubComponentStyling style = {style1}>
             <div className='IndividualFeatures' onMouseLeave={()=>setHidden(true)} >
-                <p style={{ color: '#3d4853', fontSize: '34px', marginBottom: '0px', fontWeight: '500' }}>{props.title}</p>
-                <p style={{ color: '#5a6b7b', fontSize: '18px' }}>{props.subTitle}</p>
+                <p style={{ color: '#3d4853', fontSize: '34px', marginBottom: '0px',marginTop:'50px' , fontWeight: '500' }}>{props.title}</p>
+                <p style={{ color: '#5a6b7b', fontSize: '18px', marginBottom: '0px' }}>{props.subTitle}</p>
                 <div className='image2AdjustmentMainDiv'>
                     <img src={props.img1} onMouseOver={()=>setHidden(false)}   style={{ margin: '0px' }} alt='img1' />
                     {isHiddden ? '' : <img className='image2Adjustment' src={props.img2} alt='img2' />}

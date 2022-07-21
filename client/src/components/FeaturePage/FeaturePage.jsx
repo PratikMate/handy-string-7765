@@ -6,13 +6,6 @@ import FeatureSubComponent from './FeatureSubComponent/FeatureSubComponent'
 
 
 const FeaturesStyling = styled.div`
-${'' /* .timekeepingReportingManagement{
-  display:flex;
-  justify-content:space-around;
-  margin: 0;
-  width:60%;
-  margin:auto;
-} */}
 .timekeepingReportingManagement{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
@@ -22,11 +15,6 @@ ${'' /* .timekeepingReportingManagement{
   width:60%;
   margin:auto;
 }
-${'' /* @media (max-width: 1100px) {
-  .timekeepingReportingManagement{
-    width:100%;
-  }
-} */}
 .timekeepingAndManagement{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
@@ -49,6 +37,54 @@ ${'' /* @media (max-width: 1100px) {
   color: white;
 }
 `
+
+const Heading2 = styled.h1`
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #3D4853;
+    margin-bottom: 30px;
+`
+const Div1 = styled.div`
+    width: 55%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+`
+const Button1 = styled.button`
+    margin-top: 50px;
+    border-radius: 5px;
+    background: #0288D1;
+    border-bottom: 4px solid #0277BD;
+    width: 285px;
+    height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 4px;
+    margin-bottom: 10px;
+`
+const BTag = styled.a`
+    font-size: 13px;
+    color: #01579B;
+    cursor: pointer;
+`
+const CTag = styled.p`
+    color: #5A6B7B;
+    font-size: 16px;
+`
+const Div4 = styled.div`
+    width: 30%;
+    display: flex;
+    margin: auto;
+    gap: 7px;
+`
+const Div5 = styled.div`
+    width: 64%;
+    display: flex;
+    margin: auto;
+    gap: 50px;
+`
+
 const FeaturePage = () => {
   return (
     <FeaturesStyling>
@@ -91,17 +127,33 @@ const FeaturePage = () => {
             </div>
           </div>
           <hr style={{
-            marginTop: '40px',
             width: "55vw",
             color: '#e7e7e7',
             backgroundColor: '#e7e7e7',
             height: .5,
-            borderColor: '#fff'
+            borderColor: '#fff',
+            margin: 'auto',
+            marginTop: '40px'
           }} />
           <div>
             {
-              data.map((e, ind) => <FeatureSubComponent key={ind} {...e} />)
+              data.map((e, ind) => <FeatureSubComponent key={e._id} {...e} />)
             }
+          </div>
+          <div>
+            <Div1>
+              <Heading2>Start tracking time with Clockify</Heading2>
+              <Div5>
+                <CTag href="https://clockify.me/chrome-time-tracking" >24/7 Support</CTag> &nbsp;•&nbsp;
+                <CTag href="https://clockify.me/firefox-time-tracking" >Cancel Anytime</CTag> &nbsp;•&nbsp;
+                <CTag href="https://clockify.me/edge-time-tracking" >Free Forever</CTag>
+              </Div5>
+              <Button1>CREATE FREE ACCOUNT</Button1>
+              <Div4>
+                <img src='https://clockify.me/assets/images/signed-up-icon.svg' alt='error' />
+                <BTag href='https://clockify.me/customers'> 125,887 people signed up last month</BTag>
+              </Div4>
+            </Div1>
           </div>
         </div>
       </div>
