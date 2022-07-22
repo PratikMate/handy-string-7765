@@ -8,6 +8,7 @@ import linux from '../../assets/svg/linux.svg'
 import mac from '../../assets/svg/mac.svg'
 import windows from '../../assets/svg/windows.svg'
 import styled from "styled-components";
+import Navbar from '../../mainComponent/Navbar';
 
 const ATag = styled.a`
 color:#03a9f4;
@@ -101,6 +102,7 @@ const DownloadPage = () => {
   ];
   return (
     <div>
+      <Navbar/>
       <Div1>
         <Heading1>Time tracking apps</Heading1>
         <P>Install Clockify and track time from anywhere — everything is synced online.</P>

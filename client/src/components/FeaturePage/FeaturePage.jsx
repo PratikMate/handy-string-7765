@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import data from './FeaturesData.json'
 import FeatureSubComponent from './FeatureSubComponent/FeatureSubComponent'
+import Navbar from '../../mainComponent/Navbar'
 
 
 const FeaturesStyling = styled.div`
@@ -88,6 +89,7 @@ const Div5 = styled.div`
 const FeaturePage = () => {
   return (
     <FeaturesStyling>
+      <Navbar />
       <div>
         <div>
           <div>
