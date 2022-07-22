@@ -1,23 +1,19 @@
-import {Routes, Route} from "react-router-dom"
-import './App.css';
-import DownloadPage from './components/DownloadPage/DownloadPage';
-import FeaturePage from "./components/FeaturePage/FeaturePage";
-import LoginPage from './components/LoginPage/LoginPage';
-import SignupPage from './components/SignupPage/SignupPage';
-import Navbar from "./mainComponent/Navbar";
-
+// import Team from './mainComponent/Report/Team';
+// import Project from './mainComponent/Report/Project';
+// import Report from './mainComponent/Report/Report';
+// import Client from './mainComponent/Report/Client';
+import Tag from './mainComponent/Report/Tag';
+// import Calendar from './mainComponent/Report/Calendar';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path='/signup' element={<SignupPage/>} />
-        <Route path='/login' element={<LoginPage/>} />
-        <Route path='/download' element={<DownloadPage />} />
-        <Route path='/features' element={<FeaturePage/>} />
-      </Routes>
+      {/* <Report/>
+      <Project/>
+      <Team/>
+      <Client/> */}
+      <Tag/>
+      {/* <Calendar/> */}
     </div>
   );
 }
-
 export default App;
