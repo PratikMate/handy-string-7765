@@ -7,10 +7,13 @@ import SignupPage from './components/SignupPage/SignupPage';
 import Navbar from "./mainComponent/Navbar";
 import HomePage from "./components/HomePage/HomePage";
 import MainComponentApp from "./mainComponent/MainComponentApp";
+import TimeTracker from "./mainComponent/Time Tracker/TimeTracker";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
+      <TimeTracker/>
       <Routes>
         <Route path='/' element={<HomePage/>} />
         <Route path='/signup' element={<SignupPage/>} />
