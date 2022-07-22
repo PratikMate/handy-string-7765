@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-// import f1 from '../../../assets/svg/FeaturesSvg/f1.svg'
-// import abc from '../../../assets/img/abc.svg'
 
 const FeatureSubComponentStyling = styled.div`
-${'' /* border:10px solid red; */}
 .IndividualFeatures{
     width:fit-content;
     margin:auto;
@@ -21,15 +18,10 @@ ${'' /* border:10px solid red; */}
 .image2AdjustmentMainDiv{
     display:grid;
 }
-.image2Adjustment:hover{
-    ${'' /* visibility: visible; */}
-}
 .image2Adjustment{
-    ${'' /* visibility:hidden; */}
     position:absolute;
     margin:auto;
 }
-
 `
 
 const FeatureSubComponent = (props) => {
@@ -41,7 +33,6 @@ const FeatureSubComponent = (props) => {
     else{
         style1 = {}
     }
-    // console.log(props._id)
     return (
         <FeatureSubComponentStyling style = {style1}>
             <div className='IndividualFeatures' onMouseLeave={()=>setHidden(true)} >
