@@ -43,11 +43,15 @@ const Button1 = styled.button`
     }
 `
 
-const Navbar = () => {
+const Navbar = (props) => {
+  
+  const handleToggle = () => {
+    props.props.toggle ? props.props.toggleNavbar(false) : props.props.toggleNavbar(true)
+  }
   return (
       <Div1>
           <Div2>
-              <img src={options} alt="error" width="27px" height="27px"/>
+              <img src={options} alt="error" onClick={() => handleToggle()} width="27px" height="27px"/>
               <img src={logo} alt="error" width="93px" height="24px"/>
           </Div2>
           <Div3>
