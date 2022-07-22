@@ -8,7 +8,6 @@ import ClockifyLogo from '../../assets/svg/clockifyLogo.svg'
 
 const SignUpStyling = styled.div`
 text-align:center;
-${'' /* margin-top:80px; */}
 margin:0px;
 background-color:#f2f6f8;
 width:100%;
@@ -25,7 +24,7 @@ display:flex;
   margin-top:40px;
 }
 .SignUpformDiv{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   border-radius:5px;
   background-color:white;
   widht:100%;
@@ -70,14 +69,14 @@ display:flex;
   font-weight:600;
   opacity:0.7;
   position:relative;
-  margin-top:-22px;
-  background:white;
+  margin-top:-14px;
+  margin-bottom:10px;
 }
 .DontHaveAccountSignUp{
   margin-top:20px;
   background-color:white;
-  padding: 2px 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 8px 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 .playstore{
   width:75%;
@@ -111,18 +110,18 @@ const LoginPage = () => {
         </div>
         <div className='mainSignUpDiv'>
           <div className='SignUpformDiv'>
-            <Link to="/" style={{ textDecoration: "none" }}><h3 style={{ fontSize: "18px", color: "black", padding: "30px 0px 0px 30px", textAlign: "left", fontWeight: "600" }}>Log In</h3></Link>
+            <Link to="/" style={{ textDecoration: "none" }}><h3 style={{ fontSize: "18px", color: "black", padding: "30px 0px 0px 40px", textAlign: "left", fontWeight: "600" }}>Log In</h3></Link>
             <form className='SignUpform'>
               <input type="text" className='SignUpinputAdjust' placeholder='Enter email' />
               <input type="password" className='SignUpinputAdjust' placeholder='Enter Password' />
-              <div style={{ display: "flex", justifyContent: 'space-between', alignItems: "center", padding: '0px 40px 0px 30px', height: '30px' }}>
+              <div style={{ display: "flex", justifyContent: 'space-between', alignItems: "center", padding: '0px 40px 0px 40px', height: '30px' }}>
 
                 <p><input type="checkbox" style={{ marginRight: '10px' }} />Stay logged in</p>
                 <p><a href='https://clockify.me/terms' style={{ color: "#0bacf5", textDecoration: "none" }}>Forgot password? </a></p>
               </div>
               <Link to={'/'}><input type="submit" className='SignUpSubmitButton' value='LOG IN' /></Link>
             </form>
-            <hr style={{ width: "80%", opacity: "1", marginTop: "15px" }} />
+            <hr style={{ width: "80%", opacity: "1", margin:'auto', marginTop: "20px" }} />
             <p className="POR">OR</p>
             <div style={{ opacity: "0.98", fontSize: "14px", color: "black", borderRadius: "4px", border: '1px solid #c6c6c6', fontWeight: "700", marginTop: "0px", cursor: "pointer", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center", gap: "10px", width: "80%", margin: "auto", height: '40px' }}>
               <img src='https://app.clockify.me/assets/ui-icons/icon-google.svg' alt='' />
@@ -133,7 +132,7 @@ const LoginPage = () => {
             <p style={{ fontSize: "14px" }}>Don't Have an account ? <Link to='/signup' style={{ fontWeight: "600", color: "#1b74e4", cursor: "pointer", textDecoration: 'none' }}>Sign Up</Link></p>
           </div>
           <br />
-          <Link to='/'><img className='playstore' src={playstore} alt='playstore' style={{ cursor: "pointer" }} /></Link>
+          <Link to='/'><img className='playstore' src={playstore} alt='playstore' style={{ cursor: "pointer", margin:'auto' }} /></Link>
           <div style={{ display: "flex", alignItems: "center", height: '40px', justifyContent: 'center', fontSize: '12px' }}>
             <img src='https://app.clockify.me/assets/ui-icons/safe.png' alt='' style={{ cursor: "pointer", marginRight: '10px' }} />
             <p>Your data is safe with us: <a href='https://clockify.me/security' style={{ color: "#0bacf5", textDecoration: "none" }}>Security Privacy</a></p>
