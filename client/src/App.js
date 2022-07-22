@@ -5,11 +5,13 @@ import FeaturePage from "./components/FeaturePage/FeaturePage";
 import LoginPage from './components/LoginPage/LoginPage';
 import SignupPage from './components/SignupPage/SignupPage';
 import Navbar from "./mainComponent/Navbar";
+import TimeTracker from "./mainComponent/Time Tracker/TimeTracker";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
+      <TimeTracker/>
       <Routes>
         <Route path='/signup' element={<SignupPage/>} />
         <Route path='/login' element={<LoginPage/>} />
