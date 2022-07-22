@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-// import { FaGoogle } from 'react-icons/fa';
 import playstore from '../../assets/img/Md_Arshad_Khan/playstore.png'
 import ClockifyLogo from '../../assets/svg/clockifyLogo.svg'
 
@@ -19,11 +18,11 @@ background-color:#f2f6f8;
   margin-top:10px;
 }
 .SignUpformDiv{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   border-radius:5px;
   background-color:white;
   widht:100%;
-  height:460px;
+  height:405px;
 }
 .SignUpform{
   widht:100%;
@@ -64,14 +63,14 @@ background-color:#f2f6f8;
   font-weight:600;
   opacity:0.7;
   position:relative;
-  margin-top:-22px;
-  background:white;
+  margin-top:-14px;
+  margin-bottom:10px;
 }
 .DontHaveAccountSignUp{
   margin-top:20px;
   background-color:white;
-  padding: 2px 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 .playstore{
   width:75%;
@@ -90,18 +89,18 @@ const SignupPage = () => {
         <p style={{ fontSize: '12px', color: 'grey' }}>No credit card required · Unsubscribe at any time </p>
       <div className='mainSignUpDiv'>
         <div className='SignUpformDiv'>
-          <Link to="/" style={{ textDecoration: "none" }}><h3 style={{ fontSize: "18px", color: "black", padding: "30px 0px 0px 30px", textAlign: "left", fontWeight: "600" }}>Sign up</h3></Link>
+          <Link to="/" style={{ textDecoration: "none" }}><h3 style={{ fontSize: "18px", color: "black", padding: "30px 0px 0px 40px", textAlign: "left", fontWeight: "600" }}>Sign up</h3></Link>
           <form className='SignUpform'>
             <input type="text" className='SignUpinputAdjust' placeholder='Enter email' />
             <input type="password" className='SignUpinputAdjust' placeholder='Choose Password' />
             <div style={{ display: "flex", alignItems: "center", paddingLeft: '30px', height: '30px' }}>
-              <input type="checkbox" style={{ marginRight: '10px' }} />
+              <input type="checkbox" style={{ marginRight: '10px', marginLeft:'10px' }} />
               <p>I agree to the <a href='https://clockify.me/terms' style={{ color: "#0bacf5", textDecoration: "none" }}>Terms of Use </a></p>
             </div>
             <Link to={'/login'}><input type="submit" className='SignUpSubmitButton' value='CREATE FREE ACCOUNT' /></Link>
             <p style={{ opacity: "1", fontSize: "11px", width: "65%", margin: "auto", marginTop: "0px", marginBottom: "10px" }}>By signing up, you agree to our Terms , Data Policy and Cookies Policy .</p>
           </form>
-          <hr style={{ width: "80%", opacity: "1", marginTop: "15px" }} />
+          <hr style={{ width: "80%", opacity: "1", margin:'auto', marginTop: "10px" }} />
           <p className="POR">OR</p>
           <div style={{ opacity: "0.98", fontSize: "14px", color: "black", borderRadius: "4px", border: '1px solid #c6c6c6', fontWeight: "700", marginTop: "0px", cursor: "pointer", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center", gap: "10px", width: "80%", margin: "auto", height: '40px' }}>
             <img src='https://app.clockify.me/assets/ui-icons/icon-google.svg' alt='' />
@@ -112,8 +111,7 @@ const SignupPage = () => {
           <p style={{ fontSize: "14px" }}>Already Have an account ? <Link to='/login' style={{ textDecoration: 'none',fontWeight: "600", color: "#1b74e4", cursor: "pointer" }}>Log in</Link></p>
         </div>
         <br />
-        {/* <p style={{ fontSize: "14px", margin: '0px 0px 15px 0px' }}>Get the app</p> */}
-        <Link to='/'><img className='playstore' src={playstore} alt='playstore' style={{ cursor: "pointer" }} /></Link>
+        <Link to='/'><img className='playstore' src={playstore} alt='playstore' style={{ cursor: "pointer", margin:'auto' }} /></Link>
         <div style={{ display: "flex", alignItems: "center", height: '40px', justifyContent: 'center', fontSize: '12px' }}>
           <img src='https://app.clockify.me/assets/ui-icons/safe.png' alt='' style={{ cursor: "pointer", marginRight: '10px' }} />
           <p>Your data is safe with us: <a href='https://clockify.me/security' style={{ color: "#0bacf5", textDecoration: "none" }}>Security Privacy</a></p>
