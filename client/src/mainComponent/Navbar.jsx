@@ -14,12 +14,16 @@ height: 50px;
 display: flex;
 justify-content: space-between;
 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+position:fixed;
+top:0;
+z-index:10000;
+background:white;
 `
 const Div2 = styled.div`
 width: fit-content;
 display: flex;
 gap: 20px;
-margin-left: 18px;
+margin-left: 14px;
 align-items: center;
 cursor:pointer;
 `
