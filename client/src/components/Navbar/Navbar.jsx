@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../store/auth/auth.actions";
 
 const NavbarWrapper = styled.div`
   display: flex;
@@ -49,6 +51,9 @@ const Button = styled.button`
   }
 `;
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const { isAuth } = useSelector((state) => state.auth);
+
   return (
     <NavbarWrapper>
       {/* leftpart */}
@@ -67,15 +72,15 @@ const Navbar = () => {
       </LeftPartDiv>
       {/* right part */}
       <RightPartDiv>
-        <Link to={`/login`}>
+        {!isAuth ? (<Link to={`/login`}>
           <div style={{ fontSize: '14px' }}>LOG IN</div>
-        </Link>
+        </Link>) :
+          <div style={{ fontSize: '14px' }} onClick={() => dispatch(logout())}>LOG OUT</div>
+        }
         <div>
-          {/* <Link to={`/signup`}>
-            <Button style={{ fontSize: '14px' }}> SIGN UP FREE</Button>
-          </Link> */}
-          <Link to={`/maincomponent`}>
-            <Button style={{ fontSize: '14px' }}>GO TO TRACKER</Button>
+         
+          <Link to={isAuth ? `/maincomponent` : `/signup`}>
+            <Button style={{ fontSize: '14px' }}>{isAuth ? "GO TO TRACKER":"SIGN UP FREE"}</Button>
           </Link>
         </div>
       </RightPartDiv>

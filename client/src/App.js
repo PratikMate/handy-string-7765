@@ -7,8 +7,12 @@ import SignupPage from './components/SignupPage/SignupPage';
 import HomePage from "./components/HomePage/HomePage";
 import MainComponentApp from "./mainComponent/MainComponentApp";
 import TimeTracker from "./mainComponent/Time Tracker/TimeTracker";
+import { useSelector } from "react-redux";
 
 function App() {
+  const { isAuth } = useSelector((state) => state.auth);
+  console.log('isAuth:', isAuth)
+
   return (
     <div className="App">
       <Routes> 

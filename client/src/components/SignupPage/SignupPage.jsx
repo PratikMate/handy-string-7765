@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import playstore from '../../assets/img/Md_Arshad_Khan/playstore.png'
 import ClockifyLogo from '../../assets/svg/clockifyLogo.svg'
+import { useDispatch } from 'react-redux';
+import { signupAPI } from '../../store/auth/auth.actions'
 
 const SignUpStyling = styled.div`
 text-align:center;
@@ -78,6 +80,9 @@ background-color:#f2f6f8;
 
 `
 const SignupPage = () => {
+  const [input1, setInput1] = useState("");
+  const [input2, setInput2] = useState("");
+  const dispatch = useDispatch();
   return (
     <SignUpStyling>
       <div className='navbarForLoginAndSignup'>
@@ -91,13 +96,18 @@ const SignupPage = () => {
         <div className='SignUpformDiv'>
           <Link to="/" style={{ textDecoration: "none" }}><h3 style={{ fontSize: "18px", color: "black", padding: "30px 0px 0px 40px", textAlign: "left", fontWeight: "600" }}>Sign up</h3></Link>
           <form className='SignUpform'>
-            <input type="text" className='SignUpinputAdjust' placeholder='Enter email' />
-            <input type="password" className='SignUpinputAdjust' placeholder='Choose Password' />
+            <input type="text" className='SignUpinputAdjust' placeholder='Enter email' required onChange={(e)=>setInput1(e.target.value)}/>
+            <input type="password" className='SignUpinputAdjust' placeholder='Choose Password' required onChange={(e) => setInput2(e.target.value)} />
             <div style={{ display: "flex", alignItems: "center", paddingLeft: '30px', height: '30px' }}>
               <input type="checkbox" style={{ marginRight: '10px', marginLeft:'10px' }} />
               <p>I agree to the <a href='https://clockify.me/terms' style={{ color: "#0bacf5", textDecoration: "none" }}>Terms of Use </a></p>
             </div>
-            <Link to={'/login'}><input type="submit" className='SignUpSubmitButton' value='CREATE FREE ACCOUNT' /></Link>
+            <Link to={'/login'}><input type="submit" className='SignUpSubmitButton' value='CREATE FREE ACCOUNT' onClick={() => dispatch(signupAPI(
+              {
+                email: input1,
+                password: input2,
+              }
+            ))} /></Link>
             <p style={{ opacity: "1", fontSize: "11px", width: "65%", margin: "auto", marginTop: "0px", marginBottom: "10px" }}>By signing up, you agree to our Terms , Data Policy and Cookies Policy .</p>
           </form>
           <hr style={{ width: "80%", opacity: "1", margin:'auto', marginTop: "10px" }} />
