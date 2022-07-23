@@ -9,41 +9,76 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProject, getProjects } from '../../store/projects/projects.actions';
 import ProjectList from "./ProjectList"
 
+const TimeTrackerStyling = styled.div`
+padding:50px 20px;
+.MainDivForTimeTracking{
+    display:flex;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border:1px solid #dedede;
+    height:fit-content;
+    align-items:center;
+    background:white;
+    justify-content:space-between;
+}
+.MainDivForTimeTrackingLeftPart{
+    height:40px;
+    margin:10px 0px 10px 20px;
+    padding:5px 15px;
+    font-size:14px;
+    width:57%;
+}
+.MainDivForTimeTrackingLeftPart:hover{
+    border:1px solid #dedede;
+}
+.MainDivForTimeTrackingRightPartSubDiv{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.MainDivForTimeTrackingRightPart{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-right:10px;
+}
+
+`
 
 const Button1 = styled.button`
-    padding: 4px 8px;
-    font-size: 12px;
+    padding: 10px 30px;
+    font-size: 14px;
     line-height: 1.4;
     border-radius: 2px;
     background-color: #03a9f4;
     color: white;
     cursor: pointer;
     font-weight: 600;
+    &:hover{
+        background-color: #0795d6;
+    }
 `
-// const Div1 = styled.div`
-//     width: 80%;
-//     display: flex;
-// `
 
 const TimeTracker = () => {
     const [watch, setwatch] = useState(0);
     const [input, setInput] = useState("")
     const [timer, settimer] = useState(null);
     const [check, setcheck] = useState(true);
+    const [totalTime, setTotalTime] = useState(0);
     //const [projectData, setProjectData] = useState([])
     const startTime = useRef(null);
     const dispatch = useDispatch();
     const { data } = useSelector((state) => state.projects);
-    //console.log('data:', data)
+    // console.log('data:', data)
 
     useEffect(() => {
         dispatch(getProjects())
     }, [])
-    
+
+  
 
     const start = () => {
         let x = new Date()
-        startTime.current = x.getHours() +" "+ x.getMinutes()
+        startTime.current = x.getHours() + ":" + x.getMinutes()
         setcheck(!check)
         if (!timer) {
             let id = setInterval(() => {
@@ -54,6 +89,12 @@ const TimeTracker = () => {
     }
 
     const stop = () => {
+        var total = 0
+        for(var i=0; i<data.length; i++){
+            total += Number(data[i].timediff)
+        }
+
+        setTotalTime(total)
         let y = new Date();
         setcheck(!check);
         clearInterval(timer);
@@ -62,7 +103,7 @@ const TimeTracker = () => {
         dispatch(addProject({
             title: input,
             starttime: startTime.current,
-            endtime: y.getHours()+" "+y.getMinutes(),
+            endtime: y.getHours() + ":" + y.getMinutes(),
             timediff: watch,
         }))
     }
@@ -71,6 +112,7 @@ const TimeTracker = () => {
     //     clearInterval(timer)
     //     setwatch(0)
     // }
+
     function msToTime(duration) {
         var milliseconds = parseInt((duration % 1000))
             , seconds = parseInt((duration / 1000) % 60)
@@ -92,37 +134,44 @@ const TimeTracker = () => {
         //     return hours + "h" + " " + minutes + "m" + " " + seconds + "s" + " " + (milliseconds / 10);
         // }
     }
+
+    
+
     return (
-        <>
-        <Box display="grid" alignItems="center" border="1px solid red" gridTemplateColumns="repeat(2,1fr)" >
-
-            <Input placeholder='What are you working on?' onChange={(e) => setInput(e.target.value)} />
-
-            <Box display="flex" width="400px" border="1px solid" position="fixed" right="10px" >
-                <Box width="20%" display='flex' justifyContent="center">
-                    <img src={plus} alt="error" width="19px" height="21px" /> <Text
-                        ml="8px" mt="7px" color="#03a9f4"
-                    >Project</Text>
-                </Box>
-                <Box mt="7px" display="block">
-                    <img src={tag} alt="error" width="20px" height="20px" />
-                </Box>
-                <Box fontSize="20px" color="gray" p="0 10px 0 15px">$</Box>
-                <Box ml="7px" mr="7px">{msToTime(watch)}</Box>
-                <Button1 onClick={check ? start : stop}>{check ? "START" : "STOP"}</Button1>
-                <Box><img src={clock} alt="error" width="13px" height="14px" /><img src={list} alt="error" width="13px" height="11px" /></Box>
-            </Box>
-            </Box>
+        <TimeTrackerStyling>
+            <div className='MainDivForTimeTracking'>
+                <input className='MainDivForTimeTrackingLeftPart' placeholder='What are you working on?' onChange={(e) => setInput(e.target.value)} />
+                <div className='MainDivForTimeTrackingRightPart'>
+                    <div className='MainDivForTimeTrackingRightPartSubDiv'>
+                        <img src={plus} alt="error"/> 
+                        <p style={{fontSize:'14px', color:'#03a9f4', fontWeight:'500', marginRight:'1.5vw'}}>Project</p>
+                    </div>
+                    <div style={{borderRight:'1px solid #e4eaee', borderLeft:'1px solid #e4eaee', padding:'5px 20px'}}>
+                        <img src={tag} alt="error"/>
+                    </div>
+                    <div style={{borderRight:'1px solid #e4eaee', padding:'5px 20px 5px 0px', fontSize:'20px', color:'#999999'}}>$</div>
+                    <div style={{fontWeight:'600', fontSize:'18px'}}>{msToTime(watch)}</div>
+                    <Button1 onClick={check ? start : stop}>{check ? "START" : "STOP"}</Button1>
+                    <div style={{display:'grid',gap:'10px'}}>
+                        <img src={clock} alt="error" />
+                        <img src={list} alt="error" />
+                    </div>
+                </div>
+            </div>
             <br />
             <br />
-            <Box>
+            <div style={{display:'flex', justifyContent:'space-between'}}>
+                <p style={{ fontSize:'14px'}}>This Week</p>
+                <div style={{ fontSize:'12px', display:'flex', alignItems:'center',color:'#9c9c9c'}}>Week Total: <p style={{ fontSize:'18px', padding:'0px 10px', fontWeight:'500',color:'black'}}>{msToTime(totalTime)}</p> </div>
+            </div>
+            <div>
                 {
                     data.map((e, ind) => (
                         <ProjectList key={ind} e={e} />
                     ))
                 }
-            </Box>
-        </>
+            </div>
+        </TimeTrackerStyling>
     )
 }
 
