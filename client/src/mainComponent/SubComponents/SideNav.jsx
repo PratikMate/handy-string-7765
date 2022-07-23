@@ -11,16 +11,17 @@ import i8 from '../../assets/svg/MainComponentSVG/tags.svg'
 import i9 from '../../assets/svg/MainComponentSVG/settings.svg'
 import i10 from '../../assets/svg/MainComponentSVG/dropdown.svg'
 import styled from 'styled-components'
-import TimeTracker from '../Time Tracker/TimeTracker'
 
 const MainComponentAppStylingPart = styled.div`
 .MainComponentAppMainSideNav{
+    margin-top:50px;
     border-top:1px solid #cacaca; 
     border-right:1px solid #cacaca; 
     width:fit-content;
+    background:white;
     height:100vh;   
     position:fixed;
-    z-index:20px;
+    z-index:10000;
 }
 .MainComponentAppSubMainSideNav{
     display:grid;
