@@ -11,7 +11,10 @@ export const projectsReducer = (state = projectsInitialState, { type, payload })
             data: payload,
         }
         case types.ADD_PROJECTS: return {
-            data:[...state.data, payload],
+            data: [...state.data, payload],
+        }
+        case types.REMOVE_PROJECTS: return {
+            data:[...state.data.filter((e) => e._id !== payload)]
         }
         default:
             return state;

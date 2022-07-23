@@ -24,8 +24,8 @@ projectRouter.post("/:userId/projects", async (req, res) => {
 })
 
 projectRouter.delete("/:userId/projects/:id", async (req, res) => {
-
-    await ProjectModel.deleteOne(req.params);
+    console.log('param', req.params)
+    await ProjectModel.deleteOne({ _id: req.params.id });
     res.send(`Successfully delete project with id ${req.params.id}`)
 })
 
