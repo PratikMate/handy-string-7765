@@ -11,7 +11,7 @@ import TimeTracker from "./mainComponent/Time Tracker/TimeTracker";
 function App() {
   return (
     <div className="App">
-      <Routes>
+      <Routes> 
         <Route path='/' element={<HomePage/>} />
         <Route path='/signup' element={<SignupPage/>} />
         <Route path='/login' element={<LoginPage/>} />

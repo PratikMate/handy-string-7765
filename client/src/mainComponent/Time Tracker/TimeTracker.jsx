@@ -101,7 +101,7 @@ const TimeTracker = () => {
             <Box display="flex" width="400px" border="1px solid" position="fixed" right="10px" >
                 <Box width="20%" display='flex' justifyContent="center">
                     <img src={plus} alt="error" width="19px" height="21px" /> <Text
-                        ml="8px" mt="7px" color="#03a9f4" textDecoration="underline"
+                        ml="8px" mt="7px" color="#03a9f4"
                     >Project</Text>
                 </Box>
                 <Box mt="7px" display="block">
