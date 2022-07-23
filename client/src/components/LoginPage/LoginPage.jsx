@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 // import { FaGoogle } from 'react-icons/fa';
 import playstore from '../../assets/img/Md_Arshad_Khan/playstore.png'
 import login from '../../assets/svg/login.svg';
 import ClockifyLogo from '../../assets/svg/clockifyLogo.svg'
+import { loginAPI } from '../../store/auth/auth.actions';
+import { useDispatch } from 'react-redux';
+
 
 const SignUpStyling = styled.div`
 text-align:center;
@@ -101,6 +104,9 @@ display:flex;
 
 `
 const LoginPage = () => {
+  const [input1, setInput1] = useState("");
+  const [input2, setInput2] = useState("");
+  const dispatch = useDispatch();
   return (
     <SignUpStyling>
       <div style={{ width: '100vw' }}>
@@ -112,14 +118,19 @@ const LoginPage = () => {
           <div className='SignUpformDiv'>
             <Link to="/" style={{ textDecoration: "none" }}><h3 style={{ fontSize: "18px", color: "black", padding: "30px 0px 0px 40px", textAlign: "left", fontWeight: "600" }}>Log In</h3></Link>
             <form className='SignUpform'>
-              <input type="text" className='SignUpinputAdjust' placeholder='Enter email' />
-              <input type="password" className='SignUpinputAdjust' placeholder='Enter Password' />
+              <input type="text" className='SignUpinputAdjust' placeholder='Enter email' required onChange={(e) => setInput1(e.target.value)} />
+              <input type="password" className='SignUpinputAdjust' placeholder='Enter Password' required onChange={(e) => setInput2(e.target.value)} />
               <div style={{ display: "flex", justifyContent: 'space-between', alignItems: "center", padding: '0px 40px 0px 40px', height: '30px' }}>
 
                 <p><input type="checkbox" style={{ marginRight: '10px' }} />Stay logged in</p>
                 <p><a href='https://clockify.me/terms' style={{ color: "#0bacf5", textDecoration: "none" }}>Forgot password? </a></p>
               </div>
-              <Link to={'/'}><input type="submit" className='SignUpSubmitButton' value='LOG IN' /></Link>
+              <Link to={'/'}><input type="submit" className='SignUpSubmitButton' value='LOG IN' onClick={() => dispatch(loginAPI(
+                {
+                  email: input1,
+                  password: input2,
+                }
+              ))} /></Link>
             </form>
             <hr style={{ width: "80%", opacity: "1", margin:'auto', marginTop: "20px" }} />
             <p className="POR">OR</p>
