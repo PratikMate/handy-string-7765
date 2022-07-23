@@ -95,22 +95,22 @@ const SideNav = ({ props }) => {
                 {
                     props ? (<div className='MainComponentAppMainSideNav'>
                         <div className='MainComponentAppSubMainSideNav'>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/timetracker')}>
                                 <img src={i1} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>TIME TRACKER</p>
                             </div>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/signup')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/calendar')}>
                                 <img src={i2} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>CALENDAR</p>
                             </div>
                             <div className='MainComponentSubMenuNavMainDiv1'>
                                 <p className='MainComponentMenuHeading1'>ANALYZE</p>
                             </div>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/dashboard')}>
                                 <img src={i3} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>DASHBOARD</p>
                             </div>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/reports')}>
                                 <img src={i4} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>REPORTS</p>
                                 <img src={i10} style={{ height: '12px', color: '#e4eaee', marginLeft: '40px' }} alt='menu1' />
@@ -118,19 +118,19 @@ const SideNav = ({ props }) => {
                             <div className='MainComponentSubMenuNavMainDiv1'>
                                 <p className='MainComponentMenuHeading1'>MANAGE</p>
                             </div>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/projects')}>
                                 <img src={i5} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>PROJECTS</p>
                             </div>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/team')}>
                                 <img src={i6} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>TEAM</p>
                             </div>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/clients')}>
                                 <img src={i7} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>CLIENTS</p>
                             </div>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/tags')}>
                                 <img src={i8} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>TAGS</p>
                             </div>
@@ -141,28 +141,28 @@ const SideNav = ({ props }) => {
                         </div>
                     </div>) : (<div className='MainComponentAppMainSideNav'>
                         <div className='MainComponentAppSubMainSideNav'>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/timetracker')}>
                                 <img src={i1} className='MainComponentImgAVG' alt='menu1' />
                             </div>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/calendar')}>
                                 <img src={i2} className='MainComponentImgAVG' alt='menu1' />
                             </div>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/dashboard')}>
                                 <img src={i3} className='MainComponentImgAVG' alt='menu1' />
                             </div>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/reports')}>
                                 <img src={i4} className='MainComponentImgAVG' alt='menu1' />
                             </div>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/projects')}>
                                 <img src={i5} className='MainComponentImgAVG' alt='menu1' />
                             </div>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/team')}>
                                 <img src={i6} className='MainComponentImgAVG' alt='menu1' />
                             </div>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/clients')}>
                                 <img src={i7} className='MainComponentImgAVG' alt='menu1' />
                             </div>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/tags')}>
                                 <img src={i8} className='MainComponentImgAVG' alt='menu1' />
                             </div>
                             <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/setting')}>
@@ -171,13 +171,7 @@ const SideNav = ({ props }) => {
                         </div>
                     </div>)
                 }
-            </div>
-            <div>
-            {/* <TimeTracker/> */}
-            </div>
-            
-
-
+            </div>   
         </MainComponentAppStylingPart>
     )
 }
