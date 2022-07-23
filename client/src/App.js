@@ -6,6 +6,7 @@ import LoginPage from './components/LoginPage/LoginPage';
 import SignupPage from './components/SignupPage/SignupPage';
 import HomePage from "./components/HomePage/HomePage";
 import MainComponentApp from "./mainComponent/MainComponentApp";
+import TimeTracker from "./mainComponent/Time Tracker/TimeTracker";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/download' element={<DownloadPage />} />
         <Route path='/features' element={<FeaturePage/>} />
         <Route path='/maincomponent' element={<MainComponentApp/>} />
+        <Route path='/timetracker' element={<TimeTracker/>} />
       </Routes>
     </div>
   );
