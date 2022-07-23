@@ -1,4 +1,4 @@
-# Project-Clockify
+# handy-string-7765
 # WEB-Clockify-Project
 This is a team project, built by us in the Construct Week in Unit-5 at Masai School
 
@@ -54,7 +54,7 @@ some snapshot of our website
 
 ### How To Use ✅
 
-First you have to have to go to the `Home Page`. There you have to click on account to get a pop window where there is sign-up using Email Address.  There you can explore the home page or go to the Main page and By set the Time Tracker into their projects . Adter start the Time user can see there activities  in calendar and Dashboard sections and save our Daily report in the Report page also user can Tag there activities .
+First you have to have to go to the `Home Page`. There you have to click on account to get a pop window where there is sign-up using Email Address.  There you can explore the home page or go to the Main page and By set the Time Tracker into their projects . Then click on start the Time user can see there activities  in calendar and Dashboard sections and save our Daily report in the Report page also user can Tag there activities .
 
 ---
 
