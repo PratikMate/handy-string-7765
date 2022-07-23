@@ -59,6 +59,21 @@ const reviwewData = [
     disc: "We grew from a couple people to almost 80 and it worked perfectly the whole time!",
     author: "— Zachary Gaskill, Sales Manager",
   },
+  {
+    title: " Get much better than",
+    disc: "I track my time for all the tasks I perform; work-related and other.",
+    author: "— Ivan Arsenov, Recruitment Manager",
+  },
+  {
+    title: " Useful and intuitive",
+    disc: "Extremely comfortable. Ads free. Amazing in terms of customer support.",
+    author: "— Ivan Napolskykh, Software Engineer,",
+  },
+  {
+    title: "Scary good!",
+    disc: "It is a powerful and often frightening insight into your own behavior.",
+    author: "— Skyler Bird, Web Designer",
+  }
 ];
 
 export default reviwewData;

@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import data from './FeaturesData.json'
 import FeatureSubComponent from './FeatureSubComponent/FeatureSubComponent'
-import Navbar from '../../mainComponent/Navbar'
+import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
+import Footer2 from '../Footer/Footer2'
 
 
 const FeaturesStyling = styled.div`
@@ -47,10 +49,10 @@ const Heading2 = styled.h1`
     margin-bottom: 30px;
 `
 const Div1 = styled.div`
-    width: 55%;
+    background:#f7fcff;
+    width: 100%;
     margin: auto;
-    margin-bottom: 100px;
-    margin-top: 100px;
+    padding:100px;
 `
 const Button1 = styled.button`
     margin-top: 50px;
@@ -74,16 +76,16 @@ const CTag = styled.p`
     font-size: 16px;
 `
 const Div4 = styled.div`
-    width: 30%;
+    width: 100%;
     display: flex;
-    margin: auto;
+    justify-content:center;
     gap: 7px;
 `
 const Div5 = styled.div`
-    width: 64%;
+    width: 100%;
     display: flex;
-    margin: auto;
-    gap: 50px;
+    justify-content:center;
+    gap: 30px;
 `
 
 const FeaturePage = () => {
@@ -93,10 +95,10 @@ const FeaturePage = () => {
       <div>
         <div>
           <div>
-            <p style={{ fontSize: '32px', fontWeight: '450', height: 'fit-content', marginBottom: '10px' }}>Features</p>
+            <p style={{ fontSize: '32px', fontWeight: '450', height: 'fit-content', marginBottom: '10px', marginTop: '50px' }}>Features</p>
             <div className='timekeepingReportingManagement'>
               <div>
-                <p style={{ fontSize: '11px', color: '#585858', fontWeight: '600' }}>TIMEKEEPING</p>
+                <p style={{ fontSize: '11px', color: '#585858', fontWeight: '600', padding:'5px 0px 10px 0px' }}>TIMEKEEPING</p>
                 <div className='timekeepingAndManagement'>
                   <Link to="/" style={{ textDecoration: "none" }}><div className='TRMButton' >Time Tracker</div></Link>
                   <Link to="/" style={{ textDecoration: "none" }}><div className='TRMButton' >Timesheet</div></Link>
@@ -107,7 +109,7 @@ const FeaturePage = () => {
                 </div>
               </div>
               <div>
-                <p style={{ fontSize: '11px', color: '#585858', fontWeight: '600' }}>REPORTING</p>
+                <p style={{ fontSize: '11px', color: '#585858', fontWeight: '600', padding:'5px 0px 10px 0px' }}>REPORTING</p>
                 <div className='timekeepingAndManagement1'>
                   <Link to="/" style={{ textDecoration: "none" }}><div className='TRMButton' >Dashboard</div></Link>
                   <Link to="/" style={{ textDecoration: "none" }}><div className='TRMButton' >Reports</div></Link>
@@ -116,7 +118,7 @@ const FeaturePage = () => {
                 </div>
               </div>
               <div>
-                <p style={{ fontSize: '11px', color: '#585858', fontWeight: '600' }}>MANAGEMENT</p>
+                <p style={{ fontSize: '11px', color: '#585858', fontWeight: '600', padding:'5px 0px 10px 0px' }}>MANAGEMENT</p>
                 <div className='timekeepingAndManagement'>
                   <Link to="/" style={{ textDecoration: "none" }}><div className='TRMButton' >Team</div></Link>
                   <Link to="/" style={{ textDecoration: "none" }}><div className='TRMButton' >Expenses</div></Link>
@@ -150,7 +152,7 @@ const FeaturePage = () => {
                 <CTag href="https://clockify.me/firefox-time-tracking" >Cancel Anytime</CTag> &nbsp;•&nbsp;
                 <CTag href="https://clockify.me/edge-time-tracking" >Free Forever</CTag>
               </Div5>
-              <Button1>CREATE FREE ACCOUNT</Button1>
+              <Link to='/signup'><Button1>CREATE FREE ACCOUNT</Button1></Link>
               <Div4>
                 <img src='https://clockify.me/assets/images/signed-up-icon.svg' alt='error' />
                 <BTag href='https://clockify.me/customers'> 125,887 people signed up last month</BTag>
@@ -159,6 +161,8 @@ const FeaturePage = () => {
           </div>
         </div>
       </div>
+      <Footer/>
+      <Footer2/>
     </FeaturesStyling>
   )
 }

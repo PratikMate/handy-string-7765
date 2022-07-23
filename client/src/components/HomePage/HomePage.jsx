@@ -12,49 +12,27 @@ import Part7 from "./MidPart/Part7";
 import Part8 from "./MidPart/Part8";
 import Part9 from "./MidPart/Part9";
 import styled from "styled-components";
+import Part7Sub from "./MidPart/Part7Sub";
 
 const HomePage = () => {
   const HomePageWrapper = styled.div`
-    width: 85vw;
-    margin-left: auto;
-    margin-right: auto;
-    // border: 1px solid red;
+    margin:auto;
+    justify-content:center;
   `;
   return (
-    <HomePageWrapper id="xx">
+    <HomePageWrapper>
       <Navbar />
-      <br />
-      <br />
       <Part1 />
-      <br />
-      <br />
       <Part2 />
-      <br />
-      <br />
       <Part3 />
-      <br />
-      <br />
       <Part4 />
-      <br />
-      <br />
       <Part5 />
-      <br />
-      <br />
       <Part6 />
-      <br />
-      <br />
       <Part7 />
-      <br />
-      <br />
+      <Part7Sub/>
       <Part8 />
-      <br />
-      <br />
       <Part9 />
-      <br />
-      <br />
       <Footer />
-      <br />
-      <br />
       <Footer2 />
     </HomePageWrapper>
   );

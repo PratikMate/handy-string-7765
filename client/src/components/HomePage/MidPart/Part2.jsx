@@ -4,18 +4,20 @@ import styled from "styled-components";
 import { FaSun } from "react-icons/fa";
 import { BsMoonFill } from "react-icons/bs";
 
-function Part2() {
-  const [show, setshow] = useState(false);
-  const Img = styled.img`
-    width: 80vw;
-    // height: 80vh;
+const Wrapper = styled.div`
+  display:grid;  
+   margin:auto;
+   justify-content:center;
+`;
+const Img = styled.img`
   `;
-  const DarkmodeButton = styled.button`
-    width: 7%;
-    border: 1px solid white ;
+const DarkmodeButton = styled.button`
+    width: 40px;
     background-color: #7f9cad;
-    height: 30px;
+    height: 25px;
     color: white;
+    margin:auto;
+    margin-top:10px;
     border-radius: 30px;
     &:hover {
     background-color: #03a9f4;
@@ -25,7 +27,9 @@ function Part2() {
     }
 
 `;
-  const Wrapper = styled.div``;
+
+function Part2() {
+  const [show, setshow] = useState(false);
 
   return (
     <Wrapper>
@@ -33,7 +37,7 @@ function Part2() {
         <Img
           src="https://clockify.me/assets/images/customers-light-gray-3.svg"
           alt=""
-          widh
+          style={{margin:'auto', marginBottom:'20px', marginTop:'20px'}}
         />
 
         {show ? (
@@ -56,7 +60,7 @@ function Part2() {
         {!show ? <BsMoonFill /> : <FaSun />}
       </DarkmodeButton>
     </Wrapper>
-  );
+  )
 }
 
 export default Part2;
