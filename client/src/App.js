@@ -17,7 +17,7 @@ function App() {
         <Route path='/login' element={<LoginPage/>} />
         <Route path='/download' element={<DownloadPage />} />
         <Route path='/features' element={<FeaturePage/>} />
-        <Route path='/maincomponent' element={<MainComponentApp/>} />
+        <Route path='/maincomponent/*' element={<MainComponentApp/>} />
         <Route path='/timetracker' element={<TimeTracker/>} />
       </Routes>
     </div>

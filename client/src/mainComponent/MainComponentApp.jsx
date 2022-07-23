@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Navbar from './Navbar'
-import SideNav from './SubComponents/SideNav'
+import SideNav from './NavbarAndSideBar/SideNav'
+import Setting from './SubComponents/Setting'
 
 const MainComponentApp = () => {
   const [toggle, setToggle] = useState(true)
@@ -16,102 +18,11 @@ const MainComponentApp = () => {
               <SideNav props = {toggle}/>
             </div>
             <div style={{background:'#f2f6f8', width:'100%', marginTop:'50px'}}>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>              
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>              
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>              
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>              
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
-              <h1>hi</h1><br/>
+              <Routes>
+                <Route path='/setting' element={<Setting/>} />
+                <Route path='/setting' element={<Setting/>} />
+              </Routes>
+              {/* <Setting/> */}
             </div>
         </div>
     </div>

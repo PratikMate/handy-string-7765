@@ -134,7 +134,7 @@ const SideNav = ({ props }) => {
                                 <img src={i8} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>TAGS</p>
                             </div>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/setting')}>
                                 <img src={i9} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>SETTINGS</p>
                             </div>
@@ -165,7 +165,7 @@ const SideNav = ({ props }) => {
                             <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
                                 <img src={i8} className='MainComponentImgAVG' alt='menu1' />
                             </div>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/setting')}>
                                 <img src={i9} className='MainComponentImgAVG' alt='menu1' />
                             </div>
                         </div>
