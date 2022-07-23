@@ -1,0 +1,4 @@
+export const GET_PROJECTS = "GET_PROJECTS";
+export const ADD_PROJECTS = "ADD_PROJECTS";
+export const UPDATE_PROJECTS = "UPDATE_PROJECTS";
+export const REMOVE_PROJECTS = "REMOVE_PROJECTS";

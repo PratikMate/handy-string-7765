@@ -11,7 +11,6 @@ const Wrapper = styled.div`
   margin: 2rem auto;
   color: #546e7a;
 `;
-
 const SiteDetailDiv = styled.div`
   text-align: center;
   width: 68%;
@@ -26,6 +25,17 @@ const RatingStarDiv = styled.div`
   word-spacing:2px;
   color: rgb(206, 206, 37);
 `;
+  const SiteDetailDiv = styled.div`
+    text-align: center;
+    width: 65%;
+    margin: 0 auto;
+    font-weight: bold;
+  `;
+  const RatingStarDiv = styled.div`
+    font-size: 12px;
+    display: flex;
+    color: rgb(206, 206, 37);
+  `;
 
 const RatingStarSpan = styled.span`
   font-size: 12px;

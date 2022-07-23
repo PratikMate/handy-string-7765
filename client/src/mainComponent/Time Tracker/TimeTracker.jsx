@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Box, Input, Text } from '@chakra-ui/react';
 import styled from "styled-components";
 import plus from "../../assets/svg/plus.svg"
 import tag from "../../assets/svg/tag-gray.svg"
 import list from "../../assets/svg/list-blue.svg"
 import clock from "../../assets/svg/clock-blue.svg"
+import { useDispatch, useSelector } from "react-redux";
+import { addProject, getProjects } from '../../store/projects/projects.actions';
+import ProjectList from "./ProjectList"
 
 
 const Button1 = styled.button`
@@ -24,10 +27,23 @@ const Button1 = styled.button`
 
 const TimeTracker = () => {
     const [watch, setwatch] = useState(0);
+    const [input, setInput] = useState("")
     const [timer, settimer] = useState(null);
     const [check, setcheck] = useState(true);
+    //const [projectData, setProjectData] = useState([])
+    const startTime = useRef(null);
+    const dispatch = useDispatch();
+    const { data } = useSelector((state) => state.projects);
+    //console.log('data:', data)
+
+    useEffect(() => {
+        dispatch(getProjects())
+    }, [])
+    
 
     const start = () => {
+        let x = new Date()
+        startTime.current = x.getHours() +" "+ x.getMinutes()
         setcheck(!check)
         if (!timer) {
             let id = setInterval(() => {
@@ -38,9 +54,17 @@ const TimeTracker = () => {
     }
 
     const stop = () => {
-        setcheck(!check)
-        clearInterval(timer)
-        settimer(null)
+        let y = new Date();
+        setcheck(!check);
+        clearInterval(timer);
+        setwatch(0);;
+        settimer(null);
+        dispatch(addProject({
+            title: input,
+            starttime: startTime.current,
+            endtime: y.getHours()+" "+y.getMinutes(),
+            timediff: watch,
+        }))
     }
 
     // const reset = () => {
@@ -69,14 +93,15 @@ const TimeTracker = () => {
         // }
     }
     return (
+        <>
         <Box display="grid" alignItems="center" border="1px solid red" gridTemplateColumns="repeat(2,1fr)" >
 
-            <Input placeholder='What are you working on?' />
+            <Input placeholder='What are you working on?' onChange={(e) => setInput(e.target.value)} />
 
             <Box display="flex" width="400px" border="1px solid" position="fixed" right="10px" >
                 <Box width="20%" display='flex' justifyContent="center">
                     <img src={plus} alt="error" width="19px" height="21px" /> <Text
-                        ml="8px" mt="7px" color="#03a9f4" textDecoration="underline"
+                        ml="8px" mt="7px" color="#03a9f4"
                     >Project</Text>
                 </Box>
                 <Box mt="7px" display="block">
@@ -87,7 +112,17 @@ const TimeTracker = () => {
                 <Button1 onClick={check ? start : stop}>{check ? "START" : "STOP"}</Button1>
                 <Box><img src={clock} alt="error" width="13px" height="14px" /><img src={list} alt="error" width="13px" height="11px" /></Box>
             </Box>
-        </Box>
+            </Box>
+            <br />
+            <br />
+            <Box>
+                {
+                    data.map((e, ind) => (
+                        <ProjectList key={ind} e={e} />
+                    ))
+                }
+            </Box>
+        </>
     )
 }
 
