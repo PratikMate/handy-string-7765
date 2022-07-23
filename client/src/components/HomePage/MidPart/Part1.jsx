@@ -20,6 +20,7 @@ const Part1 = () => {
   `;
   const RatingStarDiv = styled.div`
     font-size: 12px;
+    display: flex;
     color: rgb(206, 206, 37);
   `;
 
