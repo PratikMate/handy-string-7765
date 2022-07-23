@@ -23,5 +23,24 @@ projectRouter.post("/:userId/projects", async (req, res) => {
     })
 })
 
+projectRouter.delete("/:userId/projects/:id", async (req, res) => {
+
+    await ProjectModel.deleteOne(req.params);
+    res.send(`Successfully delete project with id ${req.params.id}`)
+})
+
+projectRouter.patch("/:userId/projects/:id", async (req, res) => {
+    // res.send(req.body);
+    try {
+        await ProjectModel.findOneAndUpdate({ _id: req.params.id }, req.body)
+            .lean()
+            .exec();
+        const task = await ProjectModel.findOne({ _id: req.params.id });
+        res.status(200).send(task);
+    } catch (error) {
+        res.status(500).send({ error: error.message });
+    }
+});
+
 module.exports = projectRouter;
 
