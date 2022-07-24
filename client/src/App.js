@@ -8,6 +8,7 @@ import HomePage from "./components/HomePage/HomePage";
 import MainComponentApp from "./mainComponent/MainComponentApp";
 import TimeTracker from "./mainComponent/Time Tracker/TimeTracker";
 import { useSelector } from "react-redux";
+import Error from './components/Error'
 
 function App() {
   const { isAuth } = useSelector((state) => state.auth);
@@ -23,6 +24,7 @@ function App() {
         <Route path='/features' element={<FeaturePage/>} />
         <Route path='/maincomponent/*' element={<MainComponentApp/>} />
         <Route path='/timetracker' element={<TimeTracker/>} />
+        <Route path='*' element={<Error/>} />
       </Routes>
     </div>
   );
