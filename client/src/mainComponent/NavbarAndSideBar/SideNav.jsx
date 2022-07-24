@@ -95,7 +95,7 @@ const SideNav = ({ props }) => {
                 {
                     props ? (<div className='MainComponentAppMainSideNav'>
                         <div className='MainComponentAppSubMainSideNav'>
-                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/timetracker')}>
+                            <div className='MainComponentSubMenuNavMainDiv' onClick={()=>navigate('/maincomponent/')}>
                                 <img src={i1} className='MainComponentImgAVG' alt='menu1' />
                                 <p className='MainComponentMenuHeading'>TIME TRACKER</p>
                             </div>
@@ -141,7 +141,7 @@ const SideNav = ({ props }) => {
                         </div>
                     </div>) : (<div className='MainComponentAppMainSideNav'>
                         <div className='MainComponentAppSubMainSideNav'>
-                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/timetracker')}>
+                            <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/')}>
                                 <img src={i1} className='MainComponentImgAVG' alt='menu1' />
                             </div>
                             <div className='MainComponentSubMenuNavMainDivToggle' onClick={()=>navigate('/maincomponent/calendar')}>
