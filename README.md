@@ -1,7 +1,7 @@
 # handy-string-7765
 # WEB-Clockify-Project
 The collaborative project was built by a team of 4 during Construct Week in Unit-5 at Masai School.
-#NOTE: [Sample login details:( email:arshad123@gmail.com, password:Arshad@123 )]
+## NOTE: [Sample login details:( email:arshad123@gmail.com, password:Arshad@123 )]
 
 some snapshot of our website
 ![Capture](https://miro.medium.com/max/1400/1*EhLvkhUVmvif7k7CGwatYQ.png)
