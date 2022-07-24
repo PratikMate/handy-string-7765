@@ -1,6 +1,5 @@
 import axios from "axios";
 import { LOGIN_ERROR, LOGIN_LOADING, LOGIN_SUCCESS, LOGOUT, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./auth.types";
-import { useNavigate } from "react-router-dom";
 
 // form
 // input feilds => api
@@ -9,10 +8,9 @@ import { useNavigate } from "react-router-dom";
 
 // thunk will help us thus writing two functions
 export const loginAPI = (data) => (dispatch) => {
-    const navigate = useNavigate()
     dispatch({ type: LOGIN_LOADING });
     axios
-        .post("http://localhost:8080/api/auth/", {
+        .post("https://clockify-arshad-pratik-rakesh.herokuapp.com/api/auth/", {
             "email": data.email,
             "password": data.password
         })
@@ -30,7 +28,7 @@ export const signupAPI = (data) => (dispatch) => {
     console.log('data:', data)
     dispatch({ type: SIGNUP_LOADING });
     axios
-        .post("http://localhost:8080/api/users/signup", {
+        .post("https://clockify-arshad-pratik-rakesh.herokuapp.com/api/users/signup", {
             "email": data.email,
             "password": data.password
         })

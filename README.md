@@ -1,7 +1,7 @@
 # handy-string-7765
 # WEB-Clockify-Project
-This is a team project, built by us in the Construct Week in Unit-5 at Masai School
-
+The collaborative project was built by a team of 4 during Construct Week in Unit-5 at Masai School.
+#NOTE: [Sample login details:( email:arshad123@gmail.com, password:Arshad@123 )]
 
 some snapshot of our website
 ![Capture](https://miro.medium.com/max/1400/1*EhLvkhUVmvif7k7CGwatYQ.png)
@@ -21,7 +21,7 @@ some snapshot of our website
 
 ## About this project: 🙌
 
-> We worked on cloning a Clockify website. This website is Time Tracker website, where they provide clothing, shoes etc. in this project, we used React JS,Node js,Express Js,Mongodb, Styled-components, bootstrap, and CSS. which we have merged by using GITHUB. Our project is dynamic and responsive in work.
+> We worked on cloning a Clockify website. Clockify is a time tracker and timesheet app that lets you track work hours across projects. In this project, we used React JS, Node js, Express Js, MongoDB, Styled-components, bootstrap, and CSS. which we have merged by using GITHUB. Our project is dynamic and responsive in work.
 > This is a team project, built by us in the Construct Week - Unit 5 at Masai School.
 
 
@@ -39,26 +39,26 @@ some snapshot of our website
 
 - `Home Page`: Nav Bar with dropdowns, sliding banners & slider for offer.
 [homepage](https://miro.medium.com/max/1400/1*EhLvkhUVmvif7k7CGwatYQ.png)
-- `Sign-Up`: User details stored in local storage.
-- `Sign-In`: User authentication to check whether user phone number and password match with details existing in the database.
+- `Sign-Up`: User details are stored in local storage.
+- `Sign-In`: User authentication to check whether the user's phone number and password match with details existing in the database.
 
-- `Feature Page`: All feature added to this Page dynamically with filters by color,and category.
+- `Feature Page`: All features are added to this Page dynamically with filters by color, and category.
 [Feature](https://miro.medium.com/max/1400/1*waIppb-zfmqmfrff_kMYeg.png)
-- `Download`: All the Chrome extension added to this page.
+- `Download`: All the Chrome extensions added to this page.
 [Download](https://miro.medium.com/max/1400/1*WzOPVQRLXg2Tnps7h5Pe9Q.png)
-- `Time Tracker`: Users can Track there activities.
-- `Calendar`: Users can add his activities into their calendar.
-- `Dashboard`: User can check there weekly and Monthly activies in a graphical manner.
+- `Time Tracker`: Users can track their activities.
+- `Calendar`: Users can add their activities to their calendars.
+- `Dashboard`: Users can check their weekly and Monthly activities in a graphical manner.
 
 ---
 
 ### How To Use ✅
 
-First you have to have to go to the `Home Page`. There you have to click on account to get a pop window where there is sign-up using Email Address.  There you can explore the home page or go to the Main page and By set the Time Tracker into their projects . Then click on start the Time user can see there activities  in calendar and Dashboard sections and save our Daily report in the Report page also user can Tag there activities .
+First, you have to have to go to the `Home Page`. There you have to click on the account to get a pop window where there is a sign-up using your Email Address.  There you can explore the home page or go to the Main page and By set the Time Tracker into their projects. Then click on start the Time user can see their activities in the calendar and Dashboard sections and save our Daily report on the Report page also users can Tag their activities.
 
 ---
 
-### Techlogy we used....🔧
+### Technology we used....🔧
 
 - `React JS` 
 - `Node JS`
@@ -75,14 +75,14 @@ First you have to have to go to the `Home Page`. There you have to click on acco
 ---
 
 # Home Page
-Here you can find brief history of the products and website
+Here you can find a brief history of the products and website
  ![10](https://miro.medium.com/max/1400/1*EhLvkhUVmvif7k7CGwatYQ.png)
     
 
 
 
 # Feature Page
-In this Page, You can all the Feature realted to Time Tracker.
+On this page, You can find all the Features related to Time Tracker.
 
 ![8](https://miro.medium.com/max/1400/1*waIppb-zfmqmfrff_kMYeg.png)
 
@@ -90,20 +90,20 @@ In this Page, You can all the Feature realted to Time Tracker.
 
 
 # Sign-Up Page
-if you want set you activities you need sign up first and login with details then only you can set your activities and track them
+if you want to set your activities you need to sign up first and log in with details then only you can set your activities and track them
 ![9](https://miro.medium.com/max/1400/1*mqGJuF0QVLe7ToVvDgXTjw.png)
 
 
 
 
 # Download Page
-In this page, you can find all the dowmload link and also find some browsers extensions.
+On this page, you can find all the download links and also find some browser extensions.
 ![2](https://miro.medium.com/max/1400/1*WzOPVQRLXg2Tnps7h5Pe9Q.png)
 
 
 
  # Time Tracker Page
-In this page, You can add your Project activities and Start the Timer also You can track your Activities.
+On this page, You can add your Project activities and Start the Timer also You can track your Activities.
 ![](https://miro.medium.com/max/1400/1*HuygkG4JvT_MKRJL03l3Dw.png)
 
 

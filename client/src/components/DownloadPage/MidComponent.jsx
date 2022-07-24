@@ -39,26 +39,27 @@ const Div3 = styled.div`
     gap: 10px 0px
 `
 
-const MidComponent = ({e}) => {
-  return (
-    <MidComp>
-          <div>
-              <img src={e.imag1} alt="error" />
-          </div>
-          <Div2>
-              <Heading1>{e.title}</Heading1>
-              <P>{e.desc}</P>
-              <Div3>
-               {
-                 e.logos.map((ele,ind) => (
-                   <Image src={ele} alt="error" key={ind} />
-                 ))
-               }
-              </Div3>
-              {e.details !== "" ? <A href="https://clockify.me/help/time-tracking/kiosk">{e.details}</A>:""}
-          </Div2>
-    </MidComp>
-  )
+const MidComponent = ({ e }) => {
+    return (
+        <MidComp>
+            <div>
+                <img src={e.imag1} alt="error" />
+            </div>
+            <Div2>
+                <Heading1>{e.title}</Heading1>
+                <P>{e.desc}</P>
+                <Div3>
+                    {
+                        e.logos.map((ele, ind) => (
+                            <a href="https://chrome.google.com/webstore/detail/clockify-time-tracker/pmjeegjhjdlccodhacdgbgfagbpmccpe" target="_blank" rel="noopener noreferrer">
+                                <Image src={ele} alt="error" key={ind} /></a>
+                        ))
+                    }
+                </Div3>
+                {e.details !== "" ? <A href="https://clockify.me/help/time-tracking/kiosk">{e.details}</A> : ""}
+            </Div2>
+        </MidComp>
+    )
 }
 
 export default MidComponent
