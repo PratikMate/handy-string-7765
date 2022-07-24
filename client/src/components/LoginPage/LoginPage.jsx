@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-// import { FaGoogle } from 'react-icons/fa';
 import playstore from '../../assets/img/Md_Arshad_Khan/playstore.png'
 import login from '../../assets/svg/login.svg';
 import ClockifyLogo from '../../assets/svg/clockifyLogo.svg'
 import { loginAPI } from '../../store/auth/auth.actions';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 const SignUpStyling = styled.div`
@@ -107,6 +106,7 @@ const LoginPage = () => {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const dispatch = useDispatch();
+  const { isAuth } = useSelector((state) => state.auth);
   return (
     <SignUpStyling>
       <div style={{ width: '100vw' }}>
@@ -125,7 +125,7 @@ const LoginPage = () => {
                 <p><input type="checkbox" style={{ marginRight: '10px' }} />Stay logged in</p>
                 <p><a href='https://clockify.me/terms' style={{ color: "#0bacf5", textDecoration: "none" }}>Forgot password? </a></p>
               </div>
-              <Link to={'/'}><input type="submit" className='SignUpSubmitButton' value='LOG IN' onClick={() => dispatch(loginAPI(
+              <Link to={'/maincomponent'}><input type="submit" className='SignUpSubmitButton' value='LOG IN' onClick={() => dispatch(loginAPI(
                 {
                   email: input1,
                   password: input2,
